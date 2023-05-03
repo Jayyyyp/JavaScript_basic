@@ -1,0 +1,33 @@
+<script>
+    /*
+1. 변수에 배열 ['사쿠라', '김채원', '카즈하', '허윤진', '홍은채'] 저장
+2. 사용자에게 삭제할 멤버 이름을 입력받고 해당 멤버를 배열에서 삭제시킨 뒤 
+삭제 완료 후의 배열을 출력해서 보여주세요.
+3. 배열에 없는 이름을 입력하면 'xxx는 잘못된 이름입니다.'라고 출력한 후 다시 
+삭제할 이름을 입력할 수 있도록 하세요.
+4. 전체멤버를 정확하게 삭제할때까지 프로그램은 계속되어야 합니다.
+    */
+    alert('테스트');
+    var members = ['사쿠라', '김채원', '카즈하', '허윤진', '홍은채'];
+
+    while(members.length > 0){
+    var memberName = prompt('삭제할 멤버 이름을 적어주세요');
+    alert(memberName);
+
+    if(memberName === null){
+        break;
+    }
+
+    var index = members.indexOf(memberName);
+
+    if(index > -1){
+        members.splice(index, 1);
+        alert(`현재 멤버 : ${members}`);
+    } else{
+        alert(`${memberName}은/는 잘못된 이름입니다. 다시 입력해주세요`);
+    }
+    if(members.length === 0){
+        alert("모든 멤버가 삭제 완료되었습니다.");
+    }
+}
+</script>
