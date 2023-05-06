@@ -1,30 +1,30 @@
 function add(n1, n2){
-    return n1 + n2; // ë°˜í™˜ë¬¸
+    return n1 + n2; // ¹İÈ¯¹®
 
-    console.log(`ì‹¤í–‰ ì•ˆëœë‹¤`);
+    console.log(`½ÇÇà ¾ÈµÈ´Ù`);
 }
 
-// ë°˜í™˜ê°’ : í•¨ìˆ˜ í˜¸ì¶œì´ ì¢…ë£Œë  ë•Œ í˜¸ì¶œ ìœ„ì¹˜ì— ì „ë‹¬ë  ê°’
+// ¹İÈ¯°ª : ÇÔ¼ö È£ÃâÀÌ Á¾·áµÉ ¶§ È£Ãâ À§Ä¡¿¡ Àü´ŞµÉ °ª
 var r1 = add(5, 7);
 console.log(r1);
 
 console.log(add(r1, add(3, 5)));
 
-// ë¦¬í„´ì´ ì—†ëŠ” void ë¦¬í„´ í•¨ìˆ˜
+// ¸®ÅÏÀÌ ¾ø´Â void ¸®ÅÏ ÇÔ¼ö
 // function showMulth(n1, n2){
 //     console(`${n1} * ${n2} = ${n1 * n2}`);
 // }
 // var result = showMulth(3, 5);
 // console.log(result);
 
-// returnì„ íƒˆì¶œë¬¸ìœ¼ë¡œ ì“°ëŠ” ì˜ˆì‹œ
+// returnÀ» Å»Ãâ¹®À¸·Î ¾²´Â ¿¹½Ã
 function question(answer){
     if(answer !== 5050){
-        console.log(`ê³„ì‚° ë˜‘ë°”ë¡œ ì•ˆí•©ë‹ˆê¹Œ?`);
+        console.log(`°è»ê ¶È¹Ù·Î ¾ÈÇÕ´Ï±î?`);
         return;
     }
-    console.log("ì •ë‹µì…ë‹ˆë‹¤!");
+    console.log("Á¤´äÀÔ´Ï´Ù!");
 }
-console.log(`1ë¶€í„° 100ê¹Œì§€ ë”í•œ ê²°ê³¼ëŠ”?`);
+console.log(`1ºÎÅÍ 100±îÁö ´õÇÑ °á°ú´Â?`);
 question(5050);
 question(5049);
