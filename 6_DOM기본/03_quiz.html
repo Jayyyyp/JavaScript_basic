@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id = "wrap">
+            <ul id = "list1">
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+                <li>리스트4</li>
+                <li>리스트5</li>
+                <li>리스트6</li>
+                <li>리스트7</li>
+            </ul>
+        </div>
+        <script>
+            // 1. id = "list1"인 요소의 자식인 <li>요소 중
+            // 홀수번 째 요소만 선택 후 배경색상 yellow 적용
+            elements = document.querySelectorAll("li:nth-child(odd)");
+            for(const $li of elements){
+                $li.style.background = "yellow";
+            }
+            // 2. id = "list1"인 요소에 <li>요소 중
+            // 짝수번째 요소만 선택후 배경색상 gray 적용
+            elements = document.querySelectorAll("li:nth-child(even)");
+            for(const $li of elements){
+                $li.style.background = "gray";
+            }
+            // 3. id = "list1"인 요소에 <li>요소 중
+            // 첫 번째 <li> 요소만 선택 후 폰트색상 red 적용
+            elements = document.querySelectorAll("li:first-child");
+            for(const $li of elements){
+                $li.style.color = "red";
+            }  
+            // 4. id = "list1"인 요소에 <li> 요소 중
+            // 마지막 번째 <li> 요소만 선택 후 폰트 색상 green 적용
+            elements = document.querySelectorAll("li:last-child");
+            for(const $li of elements){
+            $li.style.color = "green";
+            }  
+            // 5. id = "list1"인 요소에 <li> 요소 중 3번째 이후 요소로만 선택 후
+            // border 2px dashed violet 적용
+            elements = document.querySelectorAll("li");
+            const[$fir, $sec, $third, ...others] = elements;
+            for($li of others){
+                $li.style.border = ' 2px dashed violet';
+            }
+        </script>
+    </body>
+</html>
