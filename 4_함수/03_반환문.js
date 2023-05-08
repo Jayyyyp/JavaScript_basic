@@ -24,6 +24,7 @@ function question(answer){
         return;
     }
     console.log("정답입니다!");
+    return;
 }
 console.log(`1부터 100까지 더한 결과는?`);
 question(5050);
