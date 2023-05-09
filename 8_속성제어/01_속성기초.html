@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="email" id="account" value="abc@gmail.com">
+
+        <script>
+            const $input = document.querySelector('input');
+
+            console.dir($input);
+
+            console.log($input.attributes.id.value);// id 속성 값 확인
+            // 위 조회 구문을 토대로 아래와 같이 바꾸기
+
+            // 1. id는 'acc'로
+            $input.attributes.id.value = 'acc';
+
+            // 2. value는 'zzz'로
+            $input.attributes.value.value = 'zzz';
+
+            // 3. type는 'checkbox'로
+            $input.attributes.type.value = 'checkbox';
+            console.log($input.attributes.id.value);
+        </script>
+    </body>
+</html>
