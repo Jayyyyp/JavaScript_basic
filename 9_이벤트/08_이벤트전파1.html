@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            #fruits {
+                padding: 50px;
+                border: 2px solid red;
+            }
+            #fruits li {
+                background: yellow;
+                margin-bottom: 10px;
+            }
+    
+            #fruits li:first-child {
+                position: absolute;
+                bottom: 10%;
+                right: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="fruits">
+            <li id="apple">Apple</li>
+            <li id="banana">Banana</li>
+            <li id="grape">Grape</li>
+        </ul>
+
+        <script>
+            const $fruits = document.getElementById('fruits');
+
+            const $apple = $fruits.firstChild;
+
+            const clickEvt = (e) => {
+                console.log('ul의 클릭 이벤트 발생!');
+                console.log(e.target);
+                console.log(`${e.target.tagName} - 누름!`);
+            };
+
+            $fruits.addEventListener("click", clickEvt);
+
+            $apple.onclick = e =>{
+                console.log('apple의 클릭 이벤트 발생');
+            }; // 부모쪽 이벤트가 우선 순위에 앞이어서 안나옴
+        </script>
+    </body>
+</html>
