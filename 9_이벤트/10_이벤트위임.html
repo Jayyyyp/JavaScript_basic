@@ -71,7 +71,7 @@
                 // 현재 내가 클릭한 요소의 텍스트 e.target.textContent
                 // 클릭 이벤트 리스너 함수 정의
                 document.querySelector("em.msg").textContent = e.target.textContent;
-
+            }
                 /*
                   입력창에 과일 이름을 쓰고 '추가' 버튼 누를 시,
                   입력창에 있던 텍스트가 <li id = '텍스트'>텍스트</li>
@@ -81,8 +81,29 @@
                 const $addBtn = document.getElementById('add');
                 const $textInput = document.querySelector('.text-box');
 
+                function makeNewFruit(){
+                    // input 태그 내부에 작성된 값은 .value로 얻을 수 있다.
+                    console.log(`현재 input에 기입된 텍스트 : ${$textInput.value}`);
 
-                 }
+                    // li 태그를 document를 이용해 생성하기
+                    const $newLi = document.createElement("li");
+
+                    // 내부에 textContent로 위에서 입력한 Input 텍스트 입력하기
+                    $newLi.textContent = $textInput.value;
+
+                    // id 속성 추가.setAttribute("id", "추가할 id 명")
+                    $newLi.setAttribute("id", $textInput.value.toLowerCase());
+
+                    // ul 태그의 자식으로 추가하기
+                    $fruits.appendChild($newLi);
+
+                    // 제출 버튼이 눌리면 input에 기입된 텍스트가 사라지게 하기
+                    $textInput.value = '';
+                }
+
+                $addBtn.onclick = makeNewFruit;
+
+
 
         </script>
     </body>
