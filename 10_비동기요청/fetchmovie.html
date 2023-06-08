@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="getBoxOfficeList"></button>
+
+        <script src="fetchmovie.js"></script>
+        <script>
+            let $button = document.getElementById("getBoxOfficeList");
+            $button.addEventListener("click", getBoxOffice);
+        </script>
+    </body>
+</html>
