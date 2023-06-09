@@ -5,12 +5,17 @@
         <title>Document</title>
     </head>
     <body>
-        <button id="getBoxOfficeList"></button>
+        <button id="getMovieInfo">박스오피스얻기</button>
 
         <script src="fetchmovie.js"></script>
         <script>
-            let $button = document.getElementById("getBoxOfficeList");
-            $button.addEventListener("click", getBoxOffice);
+            
+            let $button = document.getElementById("getMovieInfo");
+            
+            // 버튼에 loadMovieList()를 클릭시 수행되도록 처리해줍니다.
+                            // loadMovieList() 로 대입시, 실행 결과자료를 해당 위치에 대입
+            $button.addEventListener("click", loadMovieList);
         </script>
+        
     </body>
 </html>
