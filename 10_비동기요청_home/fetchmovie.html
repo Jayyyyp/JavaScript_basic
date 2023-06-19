@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="getMovieInfo">박스오피스얻기</button>
+
+    <script src="fetchmovie.js"></script>
+    <script>
+        let $button = document.getElementById("getMovieInfo");
+        $button.addEventListener("click", loadMovieList);
+    </script>
+</body>
+</html>
